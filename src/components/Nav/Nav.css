@@ -1,93 +1,124 @@
-nav{        
+nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    top: 0;    
     position: fixed;
-    color: white;
+    top: 0;
     width: 100%;
     height: 80px;
+    color: white;
     z-index: 20;
     background-color: #110f0f;
-} 
-nav ul a{
-    cursor: pointer;
 }
-nav ul a:hover{
-   color: rgb(107, 211, 211);
-   border-bottom: 2px solid white;
-    }  
-.active{
-   color: rgb(107, 211, 211);
-   border-bottom: 2px solid white;
-    }    
- nav ul{
+
+/* navigation links */
+
+nav ul{
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
     gap: 20px;
     color: white;
-    list-style-type: none;
+    list-style: none;
     font-size: 20px;
 }
+
+nav ul a{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul a:hover{
+    color: rgb(107, 211, 211);
+    border-bottom: 2px solid white;
+}
+
+.active{
+    color: rgb(107, 211, 211);
+    border-bottom: 2px solid white;
+}
+
+/* logo */
+
 nav h1{
     font-size: 30px;
     font-weight: 600;
     color: transparent;
-    background: linear-gradient(to right,rgb(0, 213, 255), white);
+    background: linear-gradient(to right,rgb(0,213,255), white);
     background-clip: text;
-    
 }
+
+/* hamburger */
+
 .hamburger{
-    display: flex;    
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 8px;
-    display: none;
+    cursor: pointer;
 }
+
 .ham{
     width: 40px;
     height: 2px;
     background-color: aliceblue;
     transition: all 0.5s;
 }
+
+/* mobile menu */
+
 .mobilemenu{
     position: absolute;
     top: 80px;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 80px);
     background-color: #110f0f3f;
     backdrop-filter: blur(7px);
     right: 0;
-    transform: translate(100%);
+    transform: translateX(100%);
+    display: flex;
     flex-direction: column;
-    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
     gap: 40px;
+    transition: 0.5s;
 }
+
 .activemobile{
-    transform: translate(0%);
-    
+    transform: translateX(0%);
 }
+
+/* hamburger animation */
+
 .activeham .ham:nth-child(1){
     transform: rotate(45deg);
     position: relative;
     top: 8px;
 }
+
 .activeham .ham:nth-child(2){
     opacity: 0;
 }
+
 .activeham .ham:nth-child(3){
     transform: rotate(-45deg);
     position: relative;
     top: -12px;
 }
-@media (max-width: 750px){
+
+/* responsive */
+
+@media (max-width:750px){
+
     .hamburger{
         display: flex;
     }
+
     .desktopmenu{
         display: none;
     }
+
 }

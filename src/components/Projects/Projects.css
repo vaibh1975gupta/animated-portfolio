@@ -1,5 +1,4 @@
-#projects {
-  height: 100vh;
+#projects{
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -8,21 +7,23 @@
   justify-content: center;
   gap:30px;
 }
+
 .slider{
   width: 90%;
   height: 300px;
   display: flex;
-  align-items: center;  
+  align-items: center;
   overflow-x: auto;
   overflow-y: hidden;
   gap: 30px;
   scrollbar-width: none;
   padding:20px;
 }
+
 #para{
-    font-size: 4vmax; 
-    color: transparent;
-    background: linear-gradient(to right,rgb(255, 0, 106), white);
-    background-clip: text;
-    text-align: center;
+  font-size: 4vmax;
+  color: transparent;
+  background: linear-gradient(to right,rgb(255,0,106), white);
+  background-clip: text;
+  text-align: center;
 }
