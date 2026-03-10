@@ -1,0 +1,120 @@
+/* ===== Main Section ===== */
+#contact {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 60px 10%;
+  background: black;
+}
+
+/* ===== Left Side ===== */
+.leftcontact {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftcontact img {
+  width: 80%;
+  max-width: 400px;
+  filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.6));
+  transition: 0.4s ease;
+}
+
+.leftcontact img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Right Side ===== */
+.rightcontact {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== Form Styling ===== */
+.rightcontact form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* Inputs & Textarea */
+.rightcontact input,
+.rightcontact textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.rightcontact input::placeholder,
+.rightcontact textarea::placeholder {
+  color: #ddd;
+}
+
+.rightcontact textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+/* Button */
+#btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #00ffff;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#btn:hover {
+  background: #00cc69;
+  transform: scale(1.05);
+}
+
+#btn:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* Success & Error Messages */
+.success {
+  color: #00ff88;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error {
+  color: #ff4d4d;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  #contact {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leftcontact img {
+    width: 70%;
+  }
+}
