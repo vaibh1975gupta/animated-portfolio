@@ -1,15 +1,16 @@
-import React from 'react'
-import "./Card.css"
-import mern from "../../assets/mern.png"
-function Card({title,image}) {
+import React from "react";
+import "./Card.css";
+
+function Card({ title, image }) {
   return (
     <div className="card">
-        <h1>{title}</h1>
-        <div className="hovercard">
-            <img src ={image} alt="" />
-        </div>
+      <h2 className="card-title">{title}</h2>
+
+      <div className="card-image">
+        <img src={image} alt={title} />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Card
+export default Card;
